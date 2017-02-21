@@ -1,0 +1,548 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+form,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+hr,
+input,
+fieldset,
+button {
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.025em;
+  background: #f8f8f8;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1040px;
+  min-height: 1%;
+}
+.container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.logo img{
+    width: 115px;
+    display: block;
+}
+
+.disclaimer {
+  padding: 1em 2em;
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    z-index: 9999;
+
+}
+#header:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+}
+
+@media (max-width: 600px) {
+    #header {
+        position: relative;
+        margin-bottom: -115px;
+    }
+}
+
+.introduction {
+  display: block;
+  height: 100vh;
+  position: relative;
+  background: url("http://www.spravedlive-dane.cz/css/images/bg-top.jpg") left bottom no-repeat;
+  background-size: cover;
+  padding-top: 170px;
+  padding-bottom: 100px;
+}
+.introduction h1 {
+  clear: both;
+  color: #ee7411;
+  margin-bottom: 25px;
+  font-size: 63px;
+  position: relative;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .introduction {
+    padding-bottom: 40px;
+    height: 100%;
+  }
+
+  .introduction h1 {
+    font-size: 35px;
+  }
+}
+
+.introduction p {
+  color: #293134;
+  font-size: 15px;
+  line-height: 24px;
+}
+.introduction p span {
+  font-weight: bolder;
+  color: #ee7411;
+}
+.introduction p a {
+  color: #ee7411;
+}
+.introduction p a:hover {
+  text-decoration: none;
+}
+.introduction p strong {
+    font-weight: bold;
+}
+.introduction .button {
+  clear: both;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 48px;
+  background: #1e262c;
+  border-radius: 7px;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin-top: 22px;
+}
+.introduction .text {
+  width: 56%;
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .introduction .text {
+    width: 100%;
+    float: none;
+  }
+}
+
+.introduction .img {
+    float: left;
+    width: 50%;
+}
+.introduction .img img {
+    position: absolute;
+    max-width: 40%;
+    max-height: 85%;
+    bottom: 0;
+    left: 2%;
+}
+
+@media (max-width: 600px) {
+  .introduction .img {
+    display: none;
+  }
+}
+
+.main-content {
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.main-content h2 {
+  clear: both;
+  color: #ee7411;
+  font-weight: lighter;
+  font-size: 63px;
+  line-height: 63px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  .main-content h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+.main-content form {
+  display: block;
+  width: 100%;
+  max-width: 870px;
+  margin: 0 auto;
+  clear: both;
+}
+.main-content .row {
+  width: 100%;
+  min-height: 1%;
+}
+.main-content .row:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+}
+.main-content .row.last {
+  margin-bottom: 10px;
+}
+@media (max-width: 925px) {
+  .main-content .row.last {
+    margin-bottom: 0;
+  }
+}
+.main-content .row p {
+  width: 33.333%;
+  padding: 0 25px;
+  float: left;
+}
+@media (max-width: 925px) {
+  .main-content .row p {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 24px;
+    max-width: 448px;
+    padding: 0 10px;
+  }
+}
+.main-content .row p.half {
+  width: 50%;
+}
+.main-content .row.kids {
+  border-bottom: 1px solid #333;
+  margin-bottom: 2em;
+}
+.main-content p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.main-content p strong,
+.main-content p a {
+  color: #ee7411;
+  font-weight: normal;
+}
+.main-content p a:hover {
+  text-decoration: none;
+}
+.main-content p.orange {
+  color: #ee7411;
+}
+.main-content form p {
+  width: 100%;
+  margin-bottom: 24px;
+  position: relative;
+}
+.main-content form p.main,
+.main-content form p.red,
+.main-content form p.green {
+  max-width: 448px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  display: block;
+  clear: both;
+  padding: 0 25px;
+}
+@media (max-width: 925px) {
+  .main-content form p.main,
+  .main-content form p.red,
+  .main-content form p.green {
+    padding: 0 10px;
+  }
+}
+.main-content form p.main {
+  margin-bottom: 34px;
+}
+@media (max-width: 925px) {
+  .main-content form p.main {
+    margin-bottom: 24px;
+  }
+}
+.main-content form p.main.checkbox {
+  width: 100%;
+  max-width: 100%;
+  clear: both;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.main-content form p.main.checkbox.first {
+  margin-top: 17px;
+}
+.main-content form p.main.checkbox.last {
+  margin-bottom: 36px;
+}
+.main-content form p.main.checkbox input,
+.main-content form p.main.checkbox label {
+  clear: none;
+  float: none;
+  width: auto;
+  display: inline-block;
+  margin: 0 0;
+  padding: 0 0;
+  height: auto;
+  line-height: normal;
+}
+.main-content form p.main.checkbox label {
+  margin-left: 15px;
+}
+.main-content form input {
+  font-weight: bold;
+}
+.main-content form p.main.checkbox .icheckbox {
+  position: relative;
+  left: 0px;
+  top: 4px;
+  clear: none !important;
+  background-size: 200% 100%;
+  background-position: 0px 0px;
+  bottom: 0px;
+  display: inline-block;
+  cursor: pointer;
+  background-image: url('images/checkbox.png');
+  width: 20px;
+  height: 20px;
+}
+.main-content form p.main.checkbox .icheckbox.hover {
+  background-position: 0 0px;
+}
+.main-content form p.main.checkbox .icheckbox:active {
+  background-position: -20px 0px;
+}
+.main-content form p.main.checkbox .icheckbox.checked {
+  background-position: -20px 0px;
+}
+.main-content form p.main.checkbox .icheckbox.disabled {
+  background-position: -20px 0px;
+}
+.main-content form p.red span.info {
+  color: #da0000;
+  border: 2px solid #da0000;
+  font-weight: bold;
+}
+.main-content form p.green span.info {
+  color: #2fa023;
+  border: 2px solid #2fa023;
+  font-weight: bold;
+}
+.main-content form p a {
+  color: #ee7411;
+}
+.main-content form p a:hover {
+  text-decoration: none;
+}
+.main-content label,
+.main-content span.text {
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 14px;
+  display: block;
+  clear: both;
+}
+.main-content input,
+.main-content span.info {
+  width: 100%;
+  display: block;
+  clear: both;
+  color: #000;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 55px;
+  height: 55px;
+  background: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+}
+@media (max-width: 600px) {
+  .main-content input,
+  .main-content span.info {
+    font-size: 19px;
+  }
+}
+.main-content span.info {
+  font-size: 22px;
+}
+
+.main-content span.info .diff {
+  font-weight: bold;
+}
+.main-content .number {
+  display: block;
+  position: absolute;
+  width: 60px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 6px 0 0 6px;
+  background: #ff7f02;
+  color: #fff;
+  font-size: 24px;
+  line-height: 55px;
+  font-weight: bold;
+  text-align: center;
+}
+.main-content ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #000;
+}
+.main-content ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+}
+.main-content :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000;
+}
+.main-content :-moz-placeholder {
+  /* Firefox 18- */
+  color: #000;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+

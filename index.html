@@ -1,0 +1,233 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="Spočítejte si o kolik vás a vaší rodinu chce ČSSD obrat na daních">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Spočítejte si o kolik vás a vaší rodinu chce ČSSD obrat na daních" />
+    <meta property="og:description" content="ČSSD chce obrat naše nejschopnější lidi a rodiny s jedním vyšším příjmem o desetitisíce měsíčně." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nespravedlive-dane.cz"/>
+    <meta property="og:image" content="http://www.spravedlive-dane.cz/images/sobotka.png#kudy-chodil-tudy-krad-socialni-demokrat" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="disclaimer">
+            <p>
+                <b>Varování</b>: Tento web není provozován ČSSD. Jedná se o satiru a příspěvek do diskuze o progresivním zdanění. Autorská práva u použitých materiálů náleží jejich vlastníkům. Jestliže tento web jakkoliv poškozuje vaše autorská, či jína práva, oznamte nám to na e‑mail nespravedlive.dane@gmail.com.
+            </p>
+        </div>
+        <div class="left">
+            <a class="logo" href="./index.html"><img src="http://spravedlive-dane.cz/images/logo.png" alt=""></a>
+        </div>
+    </div>
+
+    <section class="introduction">
+        <div class="container">
+            <div class="text">
+                <h1>&ldquo;Spravedlivé&rdquo; daně</h1>
+                <p>
+                    Chceme, aby voliči ČSSD pocítili, že se jiným daří lépe i navzdory naší vládě.
+                    Proto jsme se rozhodli malé části zaměstnanců zvýšit daně. Zaměřili jsme se
+                    na lékaře, IT profesionály a různé odborníky, kteří jsou lépe placení, je
+                    jich méně, a proto se nemůžou efektivně bránit u voleb.
+                    Stranou nezůstanou ani rodiny s jedním větším příjmem, ty obereme také. Každý
+                    člověk s příjmem nad 48 955 Kč hrubého měsíčně si s našimi "spravedlivými" daněmi
+                    podstatně pohorší.
+                    <br><br><span>Spočítejte si na naší daňové kalkulačce, o kolik vás a vaší rodinu ČSSD obere.</span>
+                    <br><br><strong>Bohuslav Sobotka</strong>
+                    <br><span>premiér a předseda ČSSD</span>
+                </p>
+                <a class="button" href="#k">Spočítejte si o kolik vás obereme</a>
+            </div>
+            <div class="img">
+                <img src="http://spravedlive-dane.cz/images/sobotka.png" alt="" title="">
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content" id="k">
+        <div class="container">
+            <h2>Kalkulačka</h2>
+            <form>
+                <fieldset>
+                    <p class="main formInput">
+                        <label for="grossSalary">Zadejte Váš hrubý měsíční příjem</label>
+                        <input type="text" id="grossSalary" placeholder="0">
+                    </p>
+
+                    <div class="row formInput" style="border-bottom: 1px solid #111; margin-bottom: 2em;">
+                        <p class="half">
+                            <label for="childrenCount">Počet dětí</label>
+                            <input type="text" id="childrenCount" placeholder="0"/>
+                        </p>
+                        <p class="half">
+                            <label for="disabledChildrenCount">z toho ZTP</label>
+                            <input type="text" id="disabledChildrenCount" placeholder="0"/>
+                        </p>
+                        <p class="main checkbox first">
+                            <input type="checkbox" id="partner" value="partner"/>
+                            <label for="partner">Sleva na druhého z manželů bez příjmů (do 68 000 Kč ročně)</label>
+                        </p>
+                        <p class="main checkbox">
+                            <input type="checkbox" id="invalidniPartner" value="invalidniPartner"/>
+                            <label for="invalidniPartner">Na druhého z manželů bez příjmů* - držitele ZTP/P</label>
+                        </p>
+                        <p class="main checkbox">
+                            <input type="checkbox" id="invalida" value="invalida"/>
+                            <label for="invalida">Invalidní důchod prvního a druhého stupně</label>
+                        </p>
+                        <p class="main checkbox">
+                            <input type="checkbox" id="invalida3" value="invalida3"/>
+                            <label for="invalida3">Invalidní důchod třetího stupně</label>
+                        </p>
+                        <p class="main checkbox">
+                            <input type="checkbox" id="ztp" value="ztp"/>
+                            <label for="ztp">Držitel průkazu ZTP/P</label>
+                        </p>
+                        <p class="main checkbox last">
+                            <input type="checkbox" id="student" value="student"/>
+                            <label for="student">Jsem student</label>
+                        </p>
+                    </div>
+
+                    <div class="row formOutput">
+                        <p>
+                            <label for="">Superhrubá mzda</label>
+                            <input type="text" id="superGrossSalary" readonly placeholder="0" />
+                        </p>
+                        <p>
+                            <label for="">Zdravotní pojištění</label>
+                            <input type="text" id="healthTax" readonly placeholder="0" />
+                        </p>
+                        <p>
+                            <label for="">Sociální pojištění</label>
+                            <input type="text" id="socialTax" readonly placeholder="0" />
+                        </p>
+                    </div>
+                    <div class="row last">
+                        <p>
+                            <label for="">Sleva na dani</label>
+                            <input type="text" id="taxDiscount" readonly placeholder="0" />
+                        </p>
+                        <p>
+                            <label for="">Daňový bonus</label>
+                            <input type="text" id="taxBonus" readonly placeholder="0" />
+                        </p>
+                        <p>
+                            <label for="">Daň z příjmu fyzických osob</label>
+                            <input type="text" id="incomeTax" readonly placeholder="0"/>
+                        </p>
+                    </div>
+                    <div class="vypoctene-hodnoty">
+                        <p class="red">
+                            <span class="text">Váš starý příjem</span>
+                            <span class="info"><span id="currentNetSalary" class="cistaStaraText">0</span> Kč</span>
+                        </p>
+                        <p class="green">
+                            <span class="text">Váš příjem po <span>okradení</span></span>
+                            <span class="info"><span id="newNetSalary" class="cistaNovaText">0</span> Kč</span>
+                        </p>
+
+                        <p style="display: none;" id="result">
+                            <span class="text"></span>
+                            <span class="info"><span class="diff">0</span> Kč</span>
+                        </p>
+
+                    </div>
+
+                    <p class="text">
+                        Pro více informací navštivte web ČSSD <a href="http://www.spravedlive-dane.cz/index.html#kudy-chodil-tudy-krad-socialni-demokrat">spravedlive-dane.cz</a>.
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="./svinstvo.js"></script>
+
+    <script type="text/javascript">
+        jQuery(window).ready(function ($) {
+            function getSalary() {
+                function getDiscountChapters() {
+                    return $('.formInput [type=checkbox]:checked')
+                        .map(function (i, cbx) { return cbx.value; })
+                        .toArray()
+                }
+
+                function getSafeValue(id) {
+                    return parseInt($(id).val(), 10) || 0;
+                }
+
+                var grossSalary = getSafeValue('#grossSalary');
+
+                var discounts = {};
+                discounts.chapters = ['poplatnik'].concat(getDiscountChapters());
+                discounts.childrenCount = getSafeValue('#childrenCount');
+                discounts.disabledChildrenCount = getSafeValue('#disabledChildrenCount');
+
+                return computeSalary(grossSalary, discounts);
+            }
+
+            function updateDisplay(salary) {
+                function setResult(visible, text, diff, cls) {
+                    var result = $('#result');
+                    visible ? result.show() : result.hide();
+                    result.attr('class', cls || "");
+                    result.find('.text').text(text || "")
+                    result.find('.diff').text(diff || "");
+                }
+
+                var fields = {
+                    '#superGrossSalary': salary.new.incomeTax.base,
+                    '#healthTax': salary.new.healthTax,
+                    '#socialTax': salary.new.socialTax,
+                    '#taxDiscount': salary.new.incomeTax.discount,
+                    '#incomeTax': salary.new.incomeTax.total > 0 ? salary.new.incomeTax.total : 0,
+                    '#currentNetSalary': salary.current.total,
+                    '#newNetSalary': salary.new.total,
+                    '#taxBonus': salary.new.incomeTax.total < 0 ? Math.abs(salary.new.incomeTax.total) : 0
+                }
+
+                Object.keys(fields).forEach(function (field) {
+                    var value = Math.round(fields[field]);
+                    $(field).val(value).text(value);
+                });
+
+                var diff = Math.round(salary.new.total - salary.current.total);
+
+                if (diff > 0) {
+                    setResult(true, "Na úkor někoho jiného si tedy polepšíte o", diff, "green");
+                } else if (diff < 0) {
+                    setResult(true, "ČSSD vás a vaší rodinu okrade o", Math.abs(diff), "red");
+                } else {
+                    setResult(false);
+                }
+
+            }
+
+            function recompute() {
+                var salary = getSalary();
+                updateDisplay(salary);
+            }
+
+            $('.formInput :input')
+                .on('change', recompute)
+                .on('keyup', recompute);
+        });
+
+    </script>
+</body>
+
+</html>
