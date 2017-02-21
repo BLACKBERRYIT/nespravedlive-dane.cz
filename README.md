@@ -1,0 +1,1 @@
+# nespravedlive-dane.cz
