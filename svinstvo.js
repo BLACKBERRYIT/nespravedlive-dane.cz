@@ -15,6 +15,14 @@ var computeSalary = (function () {
 		return Math.min(gross * 0.065, 112928);
 	}
 
+	function getEmployerHealthTax(gross) {
+		return gross * 0.9;
+	}
+
+	function getEmployerSocialTax(gross) {
+		return gross * 0.25;
+	}
+
 	function getTaxDiscount(chapters) {
 		var discounts = {
 			'poplatnik': 2070,
@@ -116,12 +124,16 @@ var computeSalary = (function () {
 	function computeNetSalary(taxBands, grossSalary, discounts) {
 		var healthTax = getHealthTax(grossSalary);
 		var socialTax = getSocialTax(grossSalary);
+		var employerHealthTax = getEmployerHealthTax(grossSalary);
+		var employerSocialTax = getEmployerSocialTax(grossSalary);
 		var incomeTax = getIncomeTax(grossSalary, taxBands, discounts);
 
 		return {
 			grossSalary: grossSalary,
 			healthTax: healthTax,
 			socialTax: socialTax,
+			employerHealthTax: employerHealthTax,
+			employerSocialTax: employerSocialTax,
 			incomeTax: incomeTax,
 			total: [
 				grossSalary,

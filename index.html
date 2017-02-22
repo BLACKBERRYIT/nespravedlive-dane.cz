@@ -104,14 +104,17 @@
                         <p>
                             <label for="">Superhrubá mzda</label>
                             <input type="text" id="superGrossSalary" readonly placeholder="0" />
+                            <span class="note" id="superGrossSalaryNote"></span>
                         </p>
                         <p>
                             <label for="">Zdravotní pojištění</label>
                             <input type="text" id="healthTax" readonly placeholder="0" />
+                            <span class="note" id="employerHealthTax"></span>
                         </p>
                         <p>
                             <label for="">Sociální pojištění</label>
                             <input type="text" id="socialTax" readonly placeholder="0" />
+                            <span class="note" id="employerSocialTax"></span>
                         </p>
                     </div>
                     <div class="row last">
@@ -193,6 +196,10 @@
                     result.find('.diff').text(diff || "");
                 }
 
+                function makeNote(value) {
+                    return '+ ' + Math.round(value) + ' navíc platí zaměstnavatel';
+                }
+
                 var fields = {
                     '#superGrossSalary': salary.new.incomeTax.base,
                     '#healthTax': salary.new.healthTax,
@@ -207,6 +214,16 @@
                 Object.keys(fields).forEach(function (field) {
                     var value = Math.round(fields[field]);
                     $(field).val(value).text(value);
+                });
+
+                var notes = {
+                    '#employerHealthTax': makeNote(salary.new.employerHealthTax),
+                    '#employerSocialTax': makeNote(salary.new.employerSocialTax),
+                    '#superGrossSalaryNote': 'O tuto částku se dělíte se státem'
+                }
+
+                Object.keys(notes).forEach(function (field) {
+                    $(field).text(notes[field]);
                 });
 
                 var diff = Math.round(salary.new.total - salary.current.total);
