@@ -16,7 +16,7 @@ var computeSalary = (function () {
 	}
 
 	function getEmployerHealthTax(gross) {
-		return gross * 0.9;
+		return gross * 0.09;
 	}
 
 	function getEmployerSocialTax(gross) {
