@@ -1,7 +1,7 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
-    <title></title>
+    <title>Spočítejte si o kolik vás a vaší rodinu chce ČSSD obrat na daních</title>
     <meta charset="utf-8">
     <meta name="description" content="Spočítejte si o kolik vás a vaší rodinu chce ČSSD obrat na daních">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="https://www.cssd.cz/favicon">
 
 </head>
 
@@ -22,7 +23,7 @@
     <div id="header">
         <div class="disclaimer">
             <p>
-                <b>Varování</b>: Tento web není provozován ČSSD. Jedná se o satiru a příspěvek do diskuze o progresivním zdanění. Autorská práva u použitých materiálů náleží jejich vlastníkům. Jestliže tento web jakkoliv poškozuje vaše autorská, či jína práva, oznamte nám to na e‑mail nespravedlive.dane@gmail.com.
+                <b>Varování</b>: Tento web není provozován ČSSD. Jedná se o satiru a příspěvek do diskuze o progresivním zdanění. Autorská práva u použitých materiálů náleží jejich vlastníkům. Jestliže tento web jakkoliv poškozuje vaše autorská, či jiná práva, oznamte nám to na e‑mail nespravedlive.dane@gmail.com.
             </p>
         </div>
         <div class="left">
@@ -211,9 +212,9 @@
                 var diff = Math.round(salary.new.total - salary.current.total);
 
                 if (diff > 0) {
-                    setResult(true, "Gratulejeme, někoho okradli o desetitisíce abyste si polepšil(a) o", diff, "green");
+                    setResult(true, "Gratulujeme, někoho okradli o desetitisíce abyste si polepšil(a) o", diff, "green");
                 } else if (diff < 0) {
-                    setResult(true, "Díky ČSSD vaší rodinu stát měsíčně okrade o", Math.abs(diff), "red");
+                    setResult(true, "Díky ČSSD vaši rodinu stát měsíčně okrade o", Math.abs(diff), "red");
                 } else {
                     setResult(false);
                 }
