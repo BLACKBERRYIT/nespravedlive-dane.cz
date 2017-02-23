@@ -144,7 +144,6 @@ var computeSalary = (function () {
 		}
 	}
 
-	var WTF = 1.34;
 	var currentBands = [
 		[toSuperGross(112928), 0.15],
 		[Number.MAX_SAFE_INTEGER, 0.22]

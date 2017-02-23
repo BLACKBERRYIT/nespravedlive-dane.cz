@@ -229,11 +229,11 @@
                     $(field).text(notes[field]);
                 });
 
-                var diff = Math.round(salary.new.total - salary.current.total);
+                var diff = Math.round(salary.new.total) - Math.round(salary.current.total);
 
                 if (diff > 0) {
                     setResult(true, "Gratulujeme, někoho okradli o desetitisíce abyste si polepšil(a) o", diff, "green");
-                } else if (diff < 0) {
+                } else if (diff <= -1) {
                     setResult(true, "Díky ČSSD vaši rodinu stát měsíčně okrade o", Math.abs(diff), "red");
                 } else {
                     setResult(false);
